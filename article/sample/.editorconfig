@@ -1,0 +1,16 @@
+root = true
+
+[*.cs]
+# Style the build enforces (EnforceCodeStyleInBuild) — so nobody has to write it in AGENTS.md.
+csharp_style_namespace_declarations = file_scoped:warning
+dotnet_diagnostic.IDE0161.severity = warning
+csharp_style_prefer_primary_constructors = true:warning
+dotnet_diagnostic.IDE0290.severity = warning
+
+# CA1716 protects libraries consumed from Visual Basic (`Shared`, `Error` are VB keywords). This is an app.
+dotnet_diagnostic.CA1716.severity = none
+
+# Switches over our enums list every value and have no `_ =>` arm, so adding a value (say,
+# OrderStatus.Cancelled) fails the build at every switch that doesn't handle it yet (CS8509).
+# CS8524 would demand an arm for unnamed values like (OrderStatus)42 — that's noise here.
+dotnet_diagnostic.CS8524.severity = none

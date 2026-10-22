@@ -1,0 +1,25 @@
+# The floor: the same command the instruction file names, run where the agent can't change it.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # the suppression check diffs against the base branch
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - run: dotnet build
+      - run: dotnet test --no-build --minimum-expected-tests 25
+      - name: A new suppression, skip or deleted test needs a human
+        if: github.event_name == 'pull_request'
+        run: eng/check-suppressions.sh "origin/${{ github.base_ref }}"

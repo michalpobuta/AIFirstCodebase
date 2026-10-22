@@ -1,0 +1,4 @@
+P:System.DateTime.Now;Inject TimeProvider and call GetLocalNow() — tests control time through FakeTimeProvider
+P:System.DateTime.UtcNow;Inject TimeProvider and call GetUtcNow() — tests control time through FakeTimeProvider
+P:System.DateTimeOffset.Now;Inject TimeProvider and call GetLocalNow() — tests control time through FakeTimeProvider
+P:System.DateTimeOffset.UtcNow;Inject TimeProvider and call GetUtcNow() — tests control time through FakeTimeProvider

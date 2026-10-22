@@ -1,0 +1,26 @@
+# The checks the agent must not change by itself. CODEOWNERS alone enforces nothing:
+# pair it with the branch rule "Require review from Code Owners" (Azure DevOps: a required-reviewer policy per path).
+
+# The specification: tests and approved snapshots
+/tests/                              @your-org/leads
+*.verified.*                         @your-org/leads
+
+# The law: build settings, analyzers, banned APIs
+/Directory.Build.props               @your-org/leads
+/Directory.Packages.props            @your-org/leads
+/.editorconfig                       @your-org/leads
+/tests/.editorconfig                 @your-org/leads
+/BannedSymbols.txt                   @your-org/leads
+/global.json                         @your-org/leads
+
+# The prose and the guards around the agent
+/AGENTS.md                           @your-org/leads
+/CLAUDE.md                           @your-org/leads
+/.github/copilot-instructions.md     @your-org/leads
+/.github/instructions/               @your-org/leads
+/.claude/                            @your-org/leads
+/.github/workflows/                  @your-org/leads
+/eng/                                @your-org/leads
+
+# A contract with someone else's system
+/src/Shop/Features/Warehouse/        @your-org/warehouse-owners

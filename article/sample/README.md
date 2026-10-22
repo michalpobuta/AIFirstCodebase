@@ -1,6 +1,6 @@
 # Shop — sample for “AI-First Codebase”
 
-The companion project for the article [AI-First Codebase: How to Set Up Your .NET Project for Working with AI](../ai-first-codebase.md).
+The companion project for the article [The AI-First .NET Codebase: A Playbook](../ai-first-codebase.md).
 A small order-management HTTP API (create, pay, ship, a CSV export for the warehouse) on .NET 10 with minimal APIs.
 The app is deliberately boring; what matters is everything around it.
 

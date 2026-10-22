@@ -25,6 +25,7 @@ prose for what the code can't say.
 
 | Part | What you get |
 |---|---|
+| [Start here: your first week](article/ai-first-codebase.md#start-here-your-first-week) | Five changes, one a day |
 | [The approach](article/ai-first-codebase.md#the-approach) | What "AI-first" means, how to measure it, and why the build comes before instruction files |
 | [Layer 1 · Structure](article/ai-first-codebase.md#layer-1--structure-the-agent-can-navigate) | Use-case names, traceable wiring, architecture tests, where to refactor first |
 | [Layer 2 · Rules](article/ai-first-codebase.md#layer-2--rules-the-build-enforces) | `Directory.Build.props`, exhaustive enum switches, banned APIs, suppressions behind review |
@@ -32,7 +33,6 @@ prose for what the code can't say.
 | [Layer 4 · Knowledge](article/ai-first-codebase.md#layer-4--knowledge-the-code-cant-give) | A short `AGENTS.md`, a tested copy for Visual Studio, path-scoped notes and skills |
 | [Playbook A · New repository](article/ai-first-codebase.md#playbook-a--a-new-repository) | Day one in about an hour |
 | [Playbook B · Existing repository](article/ai-first-codebase.md#playbook-b--an-existing-repository) | Make it run, pin it with characterization tests, write down what's hidden, then change it |
-| [Your first week](article/ai-first-codebase.md#your-first-week) | Five changes, one per day |
 
 Evidence is as of October 2026. Every number names its source, its evidence type and the model generation it
 was measured on.

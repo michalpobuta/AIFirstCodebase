@@ -14,7 +14,7 @@ if (lastMessage.TrimStart().StartsWith("SPEC QUESTION:", StringComparison.Ordina
     return 0;
 
 var root = Environment.GetEnvironmentVariable("CLAUDE_PROJECT_DIR") ?? Directory.GetCurrentDirectory();
-if (Run("git", "status", "--porcelain", "--", "src", "tests").Output.Length == 0)
+if (Run("git", "status", "--porcelain", "--", "src", "tests", "Directory.Build.props", "Directory.Packages.props", ".editorconfig", "global.json", "BannedSymbols.txt").Output.Length == 0)
     return 0; // nothing changed, nothing to verify
 
 var build = Run("dotnet", "build", "--nologo", "-v", "q", "-clp:NoSummary");

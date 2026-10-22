@@ -11,7 +11,7 @@ Order-management HTTP API. .NET 10, minimal APIs, in-memory storage.
 
 - Style, nullability, analyzers              [enforced: dotnet build · Directory.Build.props]
 - No wall clock in app code                  [enforced: RS0030 · BannedSymbols.txt]
-- Every switch handles every OrderStatus     [enforced: CS8509 · .editorconfig]
+- OrderStatus switches have no `_` arm       [enforced: CS8509 · TreatWarningsAsErrors]
 - No *Manager, *Helper or *Utils types       [test: TypeNames_SayWhatTheTypeDoes]
 - Handlers don't reference ASP.NET Core      [test: Handlers_DoNotKnowAboutHttp]
 
